@@ -13,13 +13,11 @@ router.route('/templates/:id?')
         if(!req.params.id){
             Tmp.find().then(doc => {
                 var tmp = []
+                // console.log(doc)
                 doc.forEach(o => {
                     return tmp.push(o.getPublicFields())
                 })
-                res
-                  .setHeader("Access-Control-Allow-Origin: *")
-                  .status(200)
-                  .send(tmp);
+                res.status(200).send(tmp);
             }).catch(e => {
                 res.status(500).send(e);
             })
