@@ -1,0 +1,13 @@
+<div class="view">
+  <div class="header">
+    <h4>Перегляд шаблону</h4>
+    <button mat-raised-button color="accent" (click)="onTemplateSave(tmp.nativeElement)"><mat-icon class="icon">save</mat-icon>Зберегти зміни</button>
+
+  </div>
+  <div class="loading">
+
+  </div>
+  <div class="temp" *ngIf="template" #tmp (click)="onClick($event)">
+    <div id="template" [outerHTML]="template"></div>
+  </div>
+</div>

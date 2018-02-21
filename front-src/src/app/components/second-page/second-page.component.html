@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="top-block">
+    <mat-card>
+      Сторінка деталей шаблона
+    </mat-card>
+  </div>
+  <div class="main-block">
+    <mat-card class="edit">
+       <app-editor [template]="template" [selectedElement]="selectedElement"></app-editor>
+    </mat-card>
+    <mat-card
+      *ngIf="template"
+      class="view"
+    >
+      <app-viewer
+        [template]="template.template"
+        (onElementChoose)="elementWasChoosen($event)"
+        (onSaveTemplate)="templateWasSeved($event)"
+      ></app-viewer>
+    </mat-card>
+  </div>
+  <div class="footer">
+    <a [routerLink]="['/']">
+      <button mat-button color="primary"><mat-icon>keyboard_arrow_left</mat-icon>Повернутися назад</button>
+    </a>
+
+  </div>
+
+</div>

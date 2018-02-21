@@ -1,0 +1,27 @@
+.container{
+  margin: 1em;
+}
+
+.top-block{
+  margin-bottom: 1em;
+}
+
+.main-block{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+.view{
+  width: 65%;
+  margin-left: 1%;
+  height: 50vh;
+}
+
+.edit{
+  width: 33%;
+  margin-right: 1%;
+  height: 50vh;
+}
+
+

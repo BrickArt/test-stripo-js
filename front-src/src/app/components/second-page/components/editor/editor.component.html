@@ -1,0 +1,22 @@
+<div class="editor" *ngIf="template">
+  <div class="header">
+    <h4>Назва шаблону</h4>
+    <p>{{ template.name }}</p>
+  </div>
+  <div class="body" *ngIf="selectedElement">
+    <h4>Редактор</h4>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <mat-icon class="icon" matPrefix>mode_edit</mat-icon>
+        <input matInput placeholder="Text editor" [value]="selectedElement.textContent" id="text" formControlName="text">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-icon class="icon" matPrefix>format_size</mat-icon>
+        <input matInput placeholder="Size editor" [value]="selectedElement.style.fontSize ? +selectedElement.style.fontSize.slice(0, -2) : 16" type="number" id="size" formControlName="size">
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" color="accent">Save</button>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="table">
+
+  <div class="tt t-header">
+    <div class="col"><p>No.</p></div>
+    <div class="col"><p>Template name</p></div>
+    <div class="col"><p>Change date</p></div>
+  </div>
+  <div
+    class="table-row"
+    *ngIf="templates"
+  >
+    <a
+      class="tt t-row"
+      *ngFor="let t of templates"
+      [routerLink]="['/template', t.id]"
+    >
+      <div class="col">
+        <p>{{ t.id }}</p>
+      </div>
+      <div class="col">
+        <p>{{ t.name }}</p>
+      </div>
+      <div class="col">
+        <p>{{ t.modified | date:"HH:mm MM.dd.yyyy" }}</p>
+      </div>
+    </a>
+  </div>
+
+
+
+</div>

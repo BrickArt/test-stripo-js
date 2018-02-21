@@ -1,0 +1,16 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 1em;
+}
+
+.icon{
+  margin-right: 0.5em;
+}
+
+button{
+  height: 3em;
+  margin: 1em 0;
+}
